@@ -1,9 +1,37 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let newWord = '';
+  let inputLength = word.length - 1;
+  for(let i = 0; i < word.length; i++) {
+    newWord += word[inputLength]
+    inputLength--;
+  }
+  return newWord === word ? true : false;
 }
 
 /* 
-  Add your pseudocode here
+
+  GOAL
+
+  My goal here is to write a function that takes a string as an argument. This is function will test the string to see if it is a palindrome. If it is a palindrome, the function will return TRUE, if it is not, the function will return FALSE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  PSEUDOCODE
+
+  ⪧ obtain the inputString length and assign this value to a variable inputLength
+  ⪧ create a loop that will:
+    ⪧ decrement inputLength by 1
+    ⪧ use decremented inputLength as an index for inputString
+    ⪧ append the character at inputString[inputLength] to newString
+    ⪧ once the loop has appended every character in inputString to newString, check if newString = inputString
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  TEST CASES
+
+  ⪧ test that function is written correctly and taking inputString
+  ⪧ test that for loop is working over inputString by console logging it
+  ⪧ check that newString is being properly appended
+  ⪧ check that conditional statement is returning the appropriate value
+
 */
 
 /*
